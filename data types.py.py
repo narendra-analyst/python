@@ -1,0 +1,41 @@
+#data types are known as (string,integer,float, complex,boolean, list,tuple,set,dictionary) float is known as decimal values like 18.6 and complex is known as i,j variables like 5j
+#string
+name = "narendra"
+print(name)
+print(type(name))
+#integer 
+mobile=8610347810
+print(mobile)
+print(type(mobile))
+#float
+percentage=18.5
+print(percentage)
+print(type(percentage))
+#complex
+modelnumber=5j
+print(modelnumber)
+print(type(modelnumber))
+#boolean
+a=5
+b=10
+print(a<b)
+print(type(a<5))
+#list
+mylist=[10,20,30]
+print(mylist)
+print(type(mylist))
+#tuple
+mytuple=(40,50,60)
+print(mytuple)
+print(type(mytuple))
+#set
+myset={"ECE","CSE","IT"}
+print(myset)
+print(type(myset))
+#dictionary
+mydict={
+                  "name":"narendra",
+                  "age":28,
+                  }
+print(mydict)
+print(type(mydict))
