@@ -49,7 +49,7 @@ elif num%2==0:
 else:
    print('the number is odd')
 #5.Check Type of Triangle (by sides) ( Equilateral Triangle, Isosceles Triangle, Scalene Triangle)
-sides=int(input('enter the equal sides (0,2,3):'))
+sides=int(input('enter the equal sides :'))
 if sides==3:
    print('equilateral triangle')
 elif sides==2:
