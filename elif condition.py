@@ -1,9 +1,9 @@
-#elif condition:
+ #elif condition:
 #1.Check if a number is +ve,-ve or 0?
 num = int(input('enter a number:'))
-if num>10 :
+if num>0 :
    print('it is a +ve number')
-elif num<10:
+elif num<0:
    print('it is a -ve number')
 else:
    print('it is a zero')
