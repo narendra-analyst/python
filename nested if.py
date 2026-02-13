@@ -1,4 +1,4 @@
-#nested if condition
+#1.nested if condition
 userName="narendra"
 userPassword="narendra@15"
 ch1=str(input("enter userName:"))
@@ -10,7 +10,7 @@ if ch1==userName:
         print("password incorrect")
 else:
     print("name and password is invalid")
-
+#2.
 userName="vijay"
 userPassword="vijay@22"
 ch1=str(input("enter userName:"))
