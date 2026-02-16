@@ -1,42 +1,50 @@
 # String Methods
-# Length
-# name='demo'
-# print(len(name))
-#  or
-# nameLength=len(name)
-# print(nameLength)
+text =" narendra stark"
 
-# Upper case
-# name='narendra'
-# stringUpper=name.upper()
-# print(stringUpper)
+print("Original:",text)
+print("Strip:",text.strip())
+print("Upper:",text.upper())
+print("Lower:",text.lower())
+print("Swapcase:",text.swapcase())
+print("Title:",text.title())
+print("Capitalize:",text.capitalize())
+print("Replace:",text.replace("stark","hero"))
+print("Count:",text.count("a"))
+print("Index of n:", text.index("n"))
+print("Index of s:", text.index("s"))
+print("Last character:", text[-1])
+print("Second last:", text[-2])
 
-# Lower case
-# name='NARENDRA'
-# stringLower=name.lower()
-# print(stringLower)
+# F-Stirng are used to easily insert variables or expressions inside a string to make output clean and readable.
+# Variables
+name = "narendra"
+age = 28
+print(f"I am {name} and I am {age}")
 
-# Title case
-# movie='jana nayagan'
-# stringTitle=movie.title()
-# print(stringTitle)
+# Expressions
+a = 10
+b = 20
+print(f"sum is {a+b}")
 
-# Capitalize
-# name='vijay'
-# stringCapitalize=name.capitalize()
-# print(stringCapitalize)
+# Variable + Expressions
+name = "narendra"
+mark = 90
+print(f"{name} scored {mark+5} after bonus")
 
-# Swap case
-# name='thalapathy vijay'
-# stringSwap=name.swapcase()
-# print(stringSwap)
+# Simple Decimal 
+price = 49.567
+print(f"price is {price}")
 
-# # Strip Case
-# email=' narendrastark15@gmail.com '
-# stringStrip=email.strip()
-# print(stringStrip)
+# Show only two decimals
+price = 49.567
+print(f"price is {price:.2f}")
 
-# Strip Left
-email=' narendrastark15@gmail.com '
-stringLstrip=email.strip()
-print(stringLstrip)
+# Precentage
+score = 0.8567
+print(f"score:{score:.2%}")
+
+# 
+name="narendra"
+money= 458.657898789
+print(f"{name} spent rupess {money:.2f} today")
+
