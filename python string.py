@@ -75,3 +75,23 @@ print(f"{a} is multiplied ny {b} is 12")
 value = 6
 print(f"the square is {6**2}")
 
+# average mark (2 decimal places)
+mark = 84.4567
+print(f"average is {mark:.2f}")
+
+# price formatting
+price = 99.9
+print(f"price: rupess {price:.2f}")
+
+# age after 5 years 
+age = 28
+print(f"i am narenda after 5 years i will be {28+5} years old")
+
+# full name
+first = "narendra"
+last = "strak"
+print(f"my full name is {first} {last}")
+
+# take name and birth year from user
+name = str(input("enter your name:"))
+age = int(input(""))
