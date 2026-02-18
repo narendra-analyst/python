@@ -45,23 +45,23 @@ print(f"score:{score:.2%}")
 
 # selftask
 name="narendra"
-money= 458.657898
+money= 458.657898789
 print(f"{name} spent rupess {money:.2f} today")
 
 # print name and age
 name = "narendra"
 age = 28
-print(f"my name is {name} and i am {age} years old")
+print("f my name is {name} and i am {age} years old")
 
 # city introduction
-city = "chennai"
+city = "puducherry"
 print(f"i live in {city}")
 
-# favorite dish
+# favorite food
 dish = "dosa"
 print(f"my favorite food is {dish}")
 
-# addition
+# addition take two numbers and print
 a = 10
 b = 5
 print(f"sum is {a+b}")
@@ -69,29 +69,9 @@ print(f"sum is {a+b}")
 # multiplication
 a = 4
 b = 3
-print(f"{a} is multiplied ny {b} is 12")
+print(f"sum is {a*b}")
 
-# square of a number
+# square of a number (**)
 value = 6
 print(f"the square is {6**2}")
 
-# average mark (2 decimal places)
-mark = 84.4567
-print(f"average is {mark:.2f}")
-
-# price formatting
-price = 99.9
-print(f"price: rupess {price:.2f}")
-
-# age after 5 years 
-age = 28
-print(f"i am narenda after 5 years i will be {28+5} years old")
-
-# full name
-first = "narendra"
-last = "strak"
-print(f"my full name is {first} {last}")
-
-# take name and birth year from user
-name = str(input("enter your name:"))
-age = int(input(""))

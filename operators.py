@@ -29,3 +29,6 @@ print(shop1)
 print(shop2)
 totalAmoutnToPay=int(shop1)+int(shop2)
 print(totalAmoutnToPay)
+
+# bitwise operator
+print(10 & 15)
