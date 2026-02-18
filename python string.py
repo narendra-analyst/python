@@ -74,4 +74,3 @@ print(f"sum is {a*b}")
 # square of a number (**)
 value = 6
 print(f"the square is {6**2}")
-
