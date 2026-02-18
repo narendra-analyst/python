@@ -43,8 +43,35 @@ print(f"price is {price:.2f}")
 score = 0.8567
 print(f"score:{score:.2%}")
 
-# 
+# selftask
 name="narendra"
-money= 458.657898789
+money= 458.657898
 print(f"{name} spent rupess {money:.2f} today")
+
+# print name and age
+name = "narendra"
+age = 28
+print(f"my name is {name} and i am {age} years old")
+
+# city introduction
+city = "chennai"
+print(f"i live in {city}")
+
+# favorite dish
+dish = "dosa"
+print(f"my favorite food is {dish}")
+
+# addition
+a = 10
+b = 5
+print(f"sum is {a+b}")
+
+# multiplication
+a = 4
+b = 3
+print(f"{a} is multiplied ny {b} is 12")
+
+# square of a number
+value = 6
+print(f"the square is {6**2}")
 

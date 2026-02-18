@@ -59,3 +59,6 @@ print( department1 is department2)   # False
 department3 = department2
 print( department3 is department2)   #  true
 
+# bitwise operator
+print(20&30)
+print(10&15)
