@@ -1,4 +1,4 @@
-# # 1.Write a program to print numbers from 1 to 10 using a for loop.
+# 1.Write a program to print numbers from 1 to 10 using a for loop.
 for i in range (1,10):
   print(i)
 
@@ -7,7 +7,7 @@ for even in range (1,20):
   if even %2==0 : 
    print(even)
 
-# # 3. Write a program to print odd numbers from 1 to 20 using a for loop.
+# 3. Write a program to print odd numbers from 1 to 20 using a for loop.
 for odd in range (1,20):
   if odd %2!=0:
     print(odd)
