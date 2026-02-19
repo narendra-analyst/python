@@ -105,6 +105,12 @@ print(result)
 # 14.
 
 # 15.
+text = "narendra@15"
+count = 0
+for ch in text :
+    if ch in "@#$*":
+        count += 0
+    print("special character:",count)
 
 # 16.
 
