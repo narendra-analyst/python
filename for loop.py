@@ -1,4 +1,4 @@
-# # 1.Write a program to print numbers from 1 to 10 using a for loop.
+# 1.Write a program to print numbers from 1 to 10 using a for loop.
 for i in range (1,10):
   print(i)
 
@@ -7,20 +7,20 @@ for even in range (1,20):
   if even %2==0 : 
    print(even)
 
-# # 3. Write a program to print odd numbers from 1 to 20 using a for loop.
+# 3. Write a program to print odd numbers from 1 to 20 using a for loop.
 for odd in range (1,20):
   if odd %2!=0:
     print(odd)
 
-# # 4.Write a program to print numbers from 10 to 1 in reverse order.
+# 4.Write a program to print numbers from 10 to 1 in reverse order.
 for i in range (10,0,-1):
   print(i)
 
-# # 5.Write a program to print the square of each number from 1 to 10.
+# 5.Write a program to print the square of each number from 1 to 10.
 for i in range (1,11):
   print(i**2)
 
-# # 6.Write a program to print the multiples of 5 up to 50.
+# 6.Write a program to print the multiples of 5 up to 50.
 for i in range (5,51,5):
  print(i)
 
