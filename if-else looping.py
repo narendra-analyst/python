@@ -75,11 +75,11 @@ for ch in text:
 print("Only alphabets:", only_alpha)
 
 # 9.Write a program to convert all lowercase letters in a string to uppercase manually using ASCII values.
-text = "narendra"
-stringUpper = text.upper()
-print(stringUpper)
-for ch in text :
-    if ch.upper():
+# text = "narendra"
+# stringUpper = text.upper()
+# print(stringUpper)
+# for ch in text :
+#     if ch.upper():
         
 # 10.Write a program to print all characters located at even indices of a string
 text = "narendra"
@@ -149,6 +149,9 @@ for ch in text:
 print("Consonants:", count)
 
 # 19.Write a program to capitalize the first letter of a string manually (without using capitalize())
+
+
+
 
 
 # 20.Write a program to print characters of a string until a vowel is encountered.
