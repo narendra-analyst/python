@@ -159,19 +159,18 @@ print("After removing duplicates:", result)
 text = "jana nayagan"
 count = 0
 for ch in text:
-    if ch.isalpha() and ch not in "aeiou":
+    if ch.isalpha() and ch not in "aeiouAEIOU":
         count += 1
 print("Consonants:", count)
 
 # 19.Write a program to capitalize the first letter of a string manually (without using capitalize())
-
-
-
-
+name = "narendra"
+if name:
+    print(name[0].upper()+name[1:])
 
 # 20.Write a program to print characters of a string until a vowel is encountered.
 text = "narendra"
-vowels = "aeiou"
+vowels = "aeiouAEIOU"
 for ch in text:
     if ch in vowels:
         break   # stop when vowel found
