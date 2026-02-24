@@ -20,6 +20,23 @@ for i in range (5):
  if i == 2:
   continue
  print(i)
+ 
+# Types of keywords in For Loop:
+# Pass - Acts as a placeholder that does nothing.
+for i in range(10) :
+   pass
+
+# Break - Exists the loop entierly.
+for i in range(5):
+   if i == 2:
+      break
+   print(i)
+
+# Continue - Skips the current iteration and moves to next one.
+for i in range(5):
+   if i ==2:
+      continue
+   print(i)
 
 # 1.Write a program to print numbers from 1 to 10 using a for loop.
 for i in range (1,10):

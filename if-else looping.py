@@ -75,11 +75,7 @@ for ch in text:
 print("Only alphabets:", only_alpha)
 
 # 9.Write a program to convert all lowercase letters in a string to uppercase manually using ASCII values.
-# text = "narendra"
-# stringUpper = text.upper()
-# print(stringUpper)
-# for ch in text :
-#     if ch.upper():
+
         
 # 10.Write a program to print all characters located at even indices of a string
 text = "narendra"
@@ -94,6 +90,17 @@ for ch in text :
   if ch == "":
     count += 1
 print("total no. of words:",count)
+for i in range(len(text)) :
+    if i %2 == 0 :
+        print(text[i])
+
+# 11.Write a program to count the number of words in a string without using split().
+text = "The quick brown fox jumps over the lazy dog"
+count = 1 # start from 1 because words = spaces + 1
+for ch in text :
+    if ch == " ":
+        count += 1
+print("Total number of words:", count)
 
 # 12.Write a program to replace all vowels in a string with * using a loop.
 text = "thalapthy vetri kondan"
@@ -105,38 +112,48 @@ for ch in str(text):
         result += ch
 print(result)
 
-# 13.write a program to find the longest word in sentence.
-text = "the miner developed pneunonoultramicro after years of inhaling valcanic dust"
+# 13.Write a program to find the longest word in a sentence.
+text = "The miner developed pneumonoultramicroscopicsilicovolcanoconiosis after years of inhaling volcanic dust"
 words = text.split()
 longest = ""
-for word in words :
-  if len(word) > len(longest):
-    longest = word
+for word in words:
+    if len(word) > len(longest) :
+        longest = word
 print("longest word:", longest)
 
-# 14.
+# 14.Write a program to check whether two strings are anagrams of each other using loops.
 
-# 15.write a program to count how many special characters are present in a string.
+# 12.Write a program to replace all vowels in a string with * using a loop.
+text = "thalapthy vetri kondan"
+result = ""
+for ch in str(text):
+    if ch in "aeiou":
+          result += "*"
+    else:
+        result += ch
+print(result)
+
+# 15.Write a program to count how many special characters are present in a string.
 text = "narendra@15"
 count = 0
 for splch in text :
-    if not splch.isalnum() :
+    if not splch.isalnum():
         count += 1
 print("special character:",count)
 
-# 16.write a program to print each character of a string a given number of times.
+# 16.Write a program to print each character of a string a given number of times.
 name = "vijay"
 times = 2
-for ch in name:
-    print(ch*times, end = "")
+for ch in name : 
+  print(ch * times, end="")
 
-# 17.write a program to remove duplicate characters form a string using loops.
-text = "Starkk"
+# 17.Write a program to remove duplicate characters from a string using loops.
+text = "duplicatee"
 result = ""
-for ch in text:
-    if ch not in result:
-        result += ch
-print("after removing duplicate:", result)
+for ch in text :
+  if ch not in result :
+     result += ch
+print("After removing duplicates:", result)
 
 # 18.Write a program to count the number of consonants in a given string.
 text = "jana nayagan"
@@ -146,15 +163,16 @@ for ch in text:
         count += 1
 print("Consonants:", count)
 
-# 19.write a program to capitalize the first letter of a string manually (without using capitalize)
-name = "narendra"
-if name:
-  print(name[0].upper() + name[1:])
+# 19.Write a program to capitalize the first letter of a string manually (without using capitalize())
 
-# 20.write a program to print characters of a string unit a vowel is encountered.
-name = "narendra"
-vowel = "aeiou"
-for ch in name:
-  if ch in vowel:
-   break # stop when vowel found
-print(ch,end ="") 
+
+
+
+
+# 20.Write a program to print characters of a string until a vowel is encountered.
+text = "narendra"
+vowels = "aeiou"
+for ch in text:
+    if ch in vowels:
+        break   # stop when vowel found
+    print(ch, end="")
