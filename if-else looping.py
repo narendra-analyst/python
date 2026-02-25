@@ -122,6 +122,28 @@ for word in words:
 print("longest word:", longest)
 
 # 14.Write a program to check whether two strings are anagrams of each other using loops.
+text1 = " Roll"
+text2 = "care"
+spaceremoved1 = text1.replace(" ","")
+spaceremoved2 = text2.replace(" ","")
+print(spaceremoved1,spaceremoved2)
+lowercase1 = spaceremoved1.lower()
+lowercase2 = spaceremoved2.lower()
+print(lowercase1,lowercase2)
+length1 = len(lowercase1)
+length2 = len(lowercase2)
+print(length1,length2)
+if length1 != length2 :
+    print("not anagram")
+else :
+    count = 0
+    for ch in lowercase1:
+       if lowercase1.count(ch) == lowercase2.count(ch):
+           count += 1
+    if count == len(lowercase1):
+        print("anagram")   
+    else :
+     print("not anagram")
 
 # 12.Write a program to replace all vowels in a string with * using a loop.
 text = "thalapthy vetri kondan"
