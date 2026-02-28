@@ -124,8 +124,8 @@ rows = 5
 for i in range(1, rows + 1):
     print("*" * i)
 
-# for i in range(5):
-#    if i == 3:
-#       break
-#    print(i,end="") 
+for i in range(5):
+   if i == 3:
+      break
+   print(i,end="") 
 

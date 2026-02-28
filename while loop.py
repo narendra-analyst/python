@@ -4,17 +4,17 @@
 # while condition :
 #    //code
 # Examples 1:
-# i = 1
-# while i<= 10:
-#     if i %2==0:
-#      print(i)
-#     i += 1
+i = 1
+while i<= 10:
+    if i %2==0:
+     print(i)
+    i += 1
 
-# # Example 2:
-# i = 1
-# while i<= 10:
-#      print(i)
-#      i += 1
+# Example 2:
+i = 1
+while i<= 10:
+     print(i)
+     i += 1
 
 # 1.Write a program to print numbers from 1 to 10 using a while loop.
 i = 1
@@ -40,13 +40,10 @@ while i <= count :
    i += 1
 
 # 4.Write a program to find the sum of even numbers from 1 to 10 using while loop.
-num = 1
-total = 0
-while num <= 10:
-    if num % 2 == 0:
-        total = total + num
-    num = num + 1
-print(total)
+
+
+
+
 
 # 5.Write a program to print numbers divisible by 3 from 1 to 30 using while loop.
 i = 1
@@ -65,7 +62,7 @@ while i <= 5:
 print(fact)
 
 # 7.Print numbers from 5 to 1 (reverse) using a while loop.
-# i = 5
+i = 5
 while i  >= 1:
     print(i)
     i -= 1

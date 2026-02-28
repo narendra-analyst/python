@@ -112,6 +112,7 @@ print("longest word:", longest)
 
 # 14.Write a program to check whether two strings are anagrams of each other using loops.
 text1 = " Race"
+text1 = " Roll"
 text2 = "care"
 spaceremoved1 = text1.replace(" ","")
 spaceremoved2 = text2.replace(" ","")
@@ -133,6 +134,16 @@ else :
         print("anagram")   
     else :
      print("not anagram")
+
+# 12.Write a program to replace all vowels in a string with * using a loop.
+text = "thalapthy vetri kondan"
+result = ""
+for ch in str(text):
+    if ch in "aeiou":
+          result += "*"
+    else:
+        result += ch
+print(result)
 
 # 15.Write a program to count how many special characters are present in a string.
 text = "narendra@15"
