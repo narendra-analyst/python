@@ -112,19 +112,20 @@ for i in range(power):
 
 # 19. Write a program to check if a number is prime or not using a for loop.
 num = 3
-is_prime = True
-if num <= 1:
-    is_prime = False
+for i in range(2, num):
+    if num % i == 0 :
+        print("not prime")
+        break
 else:
-    for i in range(2, num):
-        if num % i == 0:
-            is_prime = False
-            if is_prime:
-             print("Prime number")
-    else:
-      print("Not a prime number")
+    print('prime')
 
 # 20.Write a program to print a right-triangle star pattern using a for loop.
 rows = 5 
 for i in range(1, rows + 1):
     print("*" * i)
+
+# for i in range(5):
+#    if i == 3:
+#       break
+#    print(i,end="") 
+

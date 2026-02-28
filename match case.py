@@ -182,3 +182,12 @@ match num :
         print('default is working')
 
 
+num = int(input("enter a value:"))
+match num :
+    case _ if num > 0 :
+        print ("positive")
+    case _ if num < 0 :
+        print("odd")
+    case _ :
+        print("zero")
+

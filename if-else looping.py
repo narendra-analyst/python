@@ -76,23 +76,12 @@ print("Only alphabets:", only_alpha)
 
 # 9.Write a program to convert all lowercase letters in a string to uppercase manually using ASCII values.
 
-        
+
 # 10.Write a program to print all characters located at even indices of a string
 text = "narendra"
 for ch in range(len(text)) :
     if ch %2 == 0 :
      print(text[ch])
-
-# 11.Write a program to count the number of words in a string without using split().
-text = "the quick brown fox jump over the lazy dog"
-count = 1 # start form 1 because  words = spaces +1
-for ch in text :
-  if ch == "":
-    count += 1
-print("total no. of words:",count)
-for i in range(len(text)) :
-    if i %2 == 0 :
-        print(text[i])
 
 # 11.Write a program to count the number of words in a string without using split().
 text = "The quick brown fox jumps over the lazy dog"
@@ -122,16 +111,28 @@ for word in words:
 print("longest word:", longest)
 
 # 14.Write a program to check whether two strings are anagrams of each other using loops.
-
-# 12.Write a program to replace all vowels in a string with * using a loop.
-text = "thalapthy vetri kondan"
-result = ""
-for ch in str(text):
-    if ch in "aeiou":
-          result += "*"
-    else:
-        result += ch
-print(result)
+text1 = " Race"
+text2 = "care"
+spaceremoved1 = text1.replace(" ","")
+spaceremoved2 = text2.replace(" ","")
+print(spaceremoved1,spaceremoved2)
+lowercase1 = spaceremoved1.lower()
+lowercase2 = spaceremoved2.lower()
+print(lowercase1,lowercase2)
+length1 = len(lowercase1)
+length2 = len(lowercase2)
+print(length1,length2)
+if length1 != length2 :
+    print("not anagram")
+else :
+    count = 0
+    for ch in lowercase1:
+       if lowercase1.count(ch) == lowercase2.count(ch):
+           count += 1
+    if count == len(lowercase1):
+        print("anagram")   
+    else :
+     print("not anagram")
 
 # 15.Write a program to count how many special characters are present in a string.
 text = "narendra@15"
@@ -159,19 +160,36 @@ print("After removing duplicates:", result)
 text = "jana nayagan"
 count = 0
 for ch in text:
-    if ch.isalpha() and ch not in "aeiouAEIOU":
+    if ch.isalpha() and ch not in "aeiou":
         count += 1
 print("Consonants:", count)
 
 # 19.Write a program to capitalize the first letter of a string manually (without using capitalize())
 name = "narendra"
-if name:
-    print(name[0].upper()+name[1:])
+print(name[0].upper()+name[1:])
 
 # 20.Write a program to print characters of a string until a vowel is encountered.
 text = "narendra"
-vowels = "aeiouAEIOU"
+vowels = "aeiou"
 for ch in text:
     if ch in vowels:
         break   # stop when vowel found
     print(ch, end="")
+
+# If in a given string there is no space and both are lower or upper case use this method.
+# text1 = "race"
+# text2 = "care"
+# length1 = len(text1)
+# length2 = len(text2)
+# print(length1,length2)
+# if length1 != length2 :
+#    print('not anagram')
+# else :
+#  count = 0
+# for ch in text1 :
+#  if text1.count(ch) == text2.count(ch) :
+#   count += 1
+# if count == len(text1) :
+#  print('anagram')
+# else :
+#  print("not anangram")
