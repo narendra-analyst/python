@@ -2,8 +2,8 @@
 myList = [10,20,30,40,50]
 print(myList)
 
-# myList = ['NA1997','Narenrda',861347810,True]
-# print(myList)
+myList = ['NA1997','Narenrda',861347810,True]
+print(myList)
 
 # Index Method
 print(myList[1:])
@@ -61,7 +61,7 @@ for i in numbers :
     print(i)
     
 # To print the even numbers and assign in new list.
-evennumbers=[]
+evennumbers=[] 
 for i in numbers :
   if i % 2 == 0:
     evennumbers.append(i)
