@@ -105,8 +105,8 @@ print(duplicates)
 # 16.Write a Python program to print list elements until the number 50 appears (stop when found).
 myList = [10, 25, 40, 60, 50, 70, 80]
 for i in myList:
-    if i == 50:
-        break
+    if i == 50:   
+        break   # stop when 50 found
     print(i)
 
 # 17.Write a Python program to count how many numbers in a list are divisible by 5.
