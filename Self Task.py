@@ -106,3 +106,82 @@ if number %2 == 0:
  print('even number')
 else:
  print('odd number')
+
+# 21.Write a Python program to print all elements of a list [10, 20, 30, 40, 50] using a for loop.
+myList = [10,20,30,40,50]
+for i in myList :
+ print(i)
+
+# 22.Write a Python program to find the smallest number in the list [34, 12, 78, 5, 23].
+numbers = [34,12,78,5,23]
+smallest = numbers[0]
+for i in numbers:
+ if i < smallest :
+  smallest = i
+print(smallest)
+
+# 23.Write a Python program to count how many odd numbers are in the list [11, 20, 33, 40, 55, 60].
+myList = [11,20,33,40,55,60]
+count = 0
+for i in myList:
+ if i %2 != 0 :
+  count += 1
+print(count)
+
+# 24.Write a Python program to find the sum of all even numbers in the list [2, 5, 8, 11, 14, 17].
+myList = [2,5,8,11,14,17]
+total = 0
+for i in myList :
+ if i %2 == 0 :
+  total += i
+print(total)
+
+# 25.Write a Python program to print numbers from 10 to 1 using a for loop.
+for i in range (11,0,-1) :
+ print(i)
+
+# 26.Write a Python program to find the second largest number in the list [10, 45, 32, 67, 89, 54].
+numbers = [10,45,32,67,89,54]
+largest = numbers[0]
+second_largest = numbers[0]
+for i in numbers :
+    if i > largest :
+        largest = i
+# second largest
+for i in numbers :
+    if i > second_largest and i != largest:
+       second_largest = i
+print(second_largest)
+
+# 27.Write a Python program to remove duplicates from a list [10, 20, 30, 20, 40, 10, 50].
+myList = [10,20,30,20,40,10,50]
+duplicates = []
+for i in myList :
+    if myList.count(i) > 1 and i not in duplicates :
+        duplicates.append(i)
+print(duplicates)
+
+# 28.Write a Python program to check whether a list [10,20,30,40,50] is sorted in ascending order.
+myList = [10, 20, 30, 40, 50]
+for i in range(len(myList)-1):
+    if myList[i] > myList[i+1]:
+        print("list is not sorted in ascending order")
+        break
+else:
+    print("list is sorted in ascending order")
+# or
+myList = [10,20,30,40,50]
+if myList == sorted(myList):
+    print("list is sorted in ascending order")
+else:
+    print("list is not sorted")
+
+# 29.Write a Python program to count how many times the number 5 appears in the list [5, 3, 5, 7, 5, 9, 1].
+myList = [5,3,5,7,5,9,11]
+print(myList.count(5))
+
+# 30.Write a Python program to print only negative numbers from the list [10, -5, 7, -2, 15, -8].
+numbers = [10,-5,7,-2,15,-8]
+for i in numbers:
+    if i < 0 :
+        print(i)
