@@ -185,3 +185,83 @@ numbers = [10,-5,7,-2,15,-8]
 for i in numbers:
     if i < 0 :
         print(i)
+
+# 31.Write a Python program to print all numbers greater than 25 from the list [10, 30, 20, 40, 15, 50].
+numbers = [10,30,20,40,15,50]
+for i in numbers :
+  if i > 25 :
+    print(i)
+
+# 32.Write a Python program to count how many numbers are divisible by 3 in the list [3, 10, 15, 22, 30, 41].
+numbers = [3,10,15,22,30,41]
+count = 0
+for i in numbers :
+  if i %3 == 0 :
+    count += 1
+print(count)
+
+# 33.Write a Python program to find the product (multiplication) of all numbers in the list [1, 2, 3, 4, 5].
+numbers = [1, 2, 3, 4, 5]
+product = 1
+for i in numbers:
+    product *= i
+print("Product:", product)
+
+# 34.Write a Python program to print the index and value of each element in the list [10, 20, 30, 40].
+elements = [10,20,30,40]
+print('index 0 value is :',elements[0])
+print('index 1 value is :',elements[1])
+print('index 2 value is :',elements[2])
+print('index 3 value is :',elements[3])
+# or
+elements = [10,20,30,40]
+for i in range(len(elements)):
+    print("Index", i, "Value", elements[i])
+
+# 35.Write a Python program to find the average of numbers in the list [10, 20, 30, 40, 50].
+myList = [10,20,30,40,50]
+total = 0
+for i in myList:
+    total += i
+average = total / len(myList)
+print("Average:", average)
+
+# 36.Write a Python program to print only even numbers from the list [11, 22, 33, 44, 55, 66].
+myList = [11,22,33,44,55,66]
+for i in myList :
+   if i % 2 == 0 :
+      print(i)
+
+# 37.Write a Python program to count how many numbers are greater than 50 in the list [23, 67, 45, 89, 12, 90].
+myList = [23, 67, 45, 89, 12, 90]
+count = 0
+for i in myList :
+   if i > 50 :
+      count += 1
+print(count)
+
+# 38.Write a Python program to create a new list containing the square of numbers from the list [1, 2, 3, 4, 5].
+myList = [1, 2, 3, 4, 5]
+newList = []
+for i in myList:
+    newList.append(i ** 2)
+print(newList)
+
+# 39.Write a Python program to find the smallest and largest number in the list [14, 2, 89, 45, 7].
+numbers = [14, 2, 89, 45, 7] 
+largest = numbers [0]
+for i in numbers :
+   if i > largest :
+      largest = i
+# for smallest number
+smallest = numbers[0]
+for i in numbers:
+    if i < smallest:
+        smallest = i
+print(largest)
+print(smallest)
+
+# 40.Write a Python program to print numbers from 1 to 20 that are divisible by 4.
+for i in range (1,21) :
+   if i %4 == 0 :
+      print(i)
