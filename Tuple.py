@@ -146,3 +146,12 @@ if all(i == numbers[0] for i in numbers):
     print("All elements are identical")
 else:
     print("Elements are not identical")
+# or
+numbers = (5, 5, 5, 5)
+for i in numbers:
+    if i != numbers[0]:
+        print("Elements are not identical")
+        break
+else:
+    print("All elements are identical")
+
