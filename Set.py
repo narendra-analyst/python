@@ -104,4 +104,81 @@ result = get_subsets(numbers)
 for subset in result:
  print(subset)
 
+# subset = {10,20,30,40,50}
+# newSubset = [set()]
+# for i in subset:
+#     newSubset.append(newSubset)
+# print(newSubset)
 
+# 5.Check if two sets are equal, considering their elements but ignoring the order (i.e., set equality).
+a = {1, 2, 3}
+b = {3, 2, 1}
+def check_sets_equal(set1, set2):
+    if len(set1) != len(set2):
+        return False
+    for i in set1:
+        if i not in set2:
+            return False
+    return True
+print(check_sets_equal(a, b))
+# or
+def check_sets_equal(set1, set2):
+    if len(set1) == len(set2):
+        return True
+    else:
+     return False
+print(check_sets_equal(a, b))
+
+# 6.Write a program that finds the intersection of multiple sets.
+set1 = {1, 2, 3, 4}
+set2 = {2, 3, 5}
+sets = [set1, set2]
+result = sets[0]
+for s in sets[1:]:
+    result = result.intersection(s)
+print(result)
+
+# 7.Find the set difference of multiple sets.
+set1 = {1, 2, 3, 4, 5}
+set2 = {2, 3}
+sets = [set1, set2]
+result = sets[0]
+for s in sets[1:]:
+   result = result.difference(s)
+print(result)
+
+# 8.Given a list of sets, write a program to return the set containing elements that are present in every set in the list.
+sets = [{1, 2, 3, 4}, {2, 3, 5}, {2, 3, 6}]
+result = sets[0]
+for s in sets:
+    result = result.intersection(s)
+print(result)
+
+# 9.Write a function that checks if a set of strings forms a palindrome when concatenated together.
+words = {"ma", "dam"}
+def check_palindrome(s):
+    text = ""
+    for word in s:
+        text = text + word
+    if text == text[::-1]:
+        return True
+    else:
+        return False
+print(check_palindrome(words))
+
+# 10.Given a set, find the number of distinct subsets where the sum of the elements in each subset is divisible by a given integer.
+numbers = {1, 2, 3}
+k = 3
+def count_subsets_divisible(s, k):
+    nums = list(s)
+    n = len(nums)
+    count = 0
+    for i in range(1 << n):   # generates all subsets
+        subset_sum = 0
+        for j in range(n):
+            if i & (1 << j):
+                subset_sum = subset_sum + nums[j]
+        if subset_sum % k == 0:
+            count = count + 1
+    return count
+print(count_subsets_divisible(numbers, k))
