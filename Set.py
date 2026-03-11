@@ -104,12 +104,6 @@ result = get_subsets(numbers)
 for subset in result:
  print(subset)
 
-# subset = {10,20,30,40,50}
-# newSubset = [set()]
-# for i in subset:
-#     newSubset.append(newSubset)
-# print(newSubset)
-
 # 5.Check if two sets are equal, considering their elements but ignoring the order (i.e., set equality).
 a = {1, 2, 3}
 b = {3, 2, 1}
@@ -182,3 +176,72 @@ def count_subsets_divisible(s, k):
             count = count + 1
     return count
 print(count_subsets_divisible(numbers, k))
+
+# 11.Write a program that finds the longest consecutive sequence in an unsorted list of numbers using sets.
+numbers = [100, 4, 200, 1, 3, 2]
+def longest_consecutive(nums):
+    num_set = set(nums)
+    longest = 0
+    for n in num_set:
+        if n - 1 not in num_set:   # start of sequence
+            current = n
+            length = 1
+            while current + 1 in num_set:
+                current = current + 1
+                length = length + 1
+            if length > longest:
+                longest = length
+    return longest
+print(longest_consecutive(numbers))
+
+# 12.Given two sets, find the symmetric difference, but only include elements that appear more than once across both sets.
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+def symmetric(a, b):
+    sym_diff = a.symmetric_difference(b)
+    combined = list(a) + list(b)
+    result = set()
+    for i in sym_diff:
+        if combined.count(i) > 1:
+            result.add(i)
+    return result
+print(symmetric(set1, set2))
+
+# 13.Write a function that checks if there exists a pair of numbers in a set that sum to a specific target
+numbers = {2, 4, 7, 11}
+target = 9
+def pair_sum(s, target):
+    for num in s:
+        needed = target - num
+        if needed in s and needed != num:
+            return True
+    return False
+print(pair_sum(numbers, target))
+
+# 14.Write a function to determine whether a set is a proper subset of another set.
+set1 = {1,2}
+set2 = {1,2,3}
+def subset(a, b):
+    if len(a) >= len(b):
+        return False
+    for i in a:
+        if i not in b:
+            return False
+    return True
+print(subset(set1, set2))
+
+# 15.Write a function that returns the elements in a set which are not present in any of the other sets from a list of sets.
+A = {1,2,3,4,5}
+sets = [{2,3}, {4,6}, {7,8}]
+def unique_elements(main_set, set_list):
+    result = set()
+    for item in main_set:
+        found = False
+        for s in set_list:
+            if item in s:
+                found = True
+                break
+        if not found:
+            result.add(item)
+    return result
+print(unique_elements(A, sets))
