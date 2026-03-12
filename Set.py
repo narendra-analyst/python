@@ -89,20 +89,17 @@ result = largest_even_subset(numbers)
 print(result)
 
 # 4.Given a set of integers, write a function that returns a new set containing all subsets of the original set.
-numbers = {1, 2, 3}
-def get_subsets(s):
-    subsets = [set()]   # start with empty subset
-    for num in s:
-        new_subsets = []
-        for subset in subsets:
-            new_subset = subset.copy()
-            new_subset.add(num)
-            new_subsets.append(new_subset)
-        subsets.extend(new_subsets)
-    return subsets
-result = get_subsets(numbers)
-for subset in result:
- print(subset)
+s = {1, 2, 3}
+nums = list(s)
+n = len(nums)
+subsets = []
+for i in range(1 << n):
+    subset = []
+    for j in range(n):
+        if i & (1 << j):
+            subset.append(nums[j])
+    subsets.append(subset)
+print(subsets)
 
 # 5.Check if two sets are equal, considering their elements but ignoring the order (i.e., set equality).
 a = {1, 2, 3}
@@ -148,17 +145,16 @@ for s in sets:
     result = result.intersection(s)
 print(result)
 
-# 9.Write a function that checks if a set of strings forms a palindrome when concatenated together.
-words = {"ma", "dam"}
-def check_palindrome(s):
-    text = ""
-    for word in s:
-        text = text + word
-    if text == text[::-1]:
-        return True
-    else:
-        return False
-print(check_palindrome(words))
+# 9.Write a program that checks if a set of strings forms a palindrome when concatenated together.
+s = {"ma", "dam"}
+text = ""
+for word in s:
+    text = text + word
+reverse = text[::-1]
+if text == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
 
 # 10.Given a set, find the number of distinct subsets where the sum of the elements in each subset is divisible by a given integer.
 numbers = {1, 2, 3}
@@ -245,3 +241,77 @@ def unique_elements(main_set, set_list):
             result.add(item)
     return result
 print(unique_elements(A, sets))
+
+# 16.Find all possible subsets of a set and return the ones where the sum of elements is prime.
+s = {1, 2, 3}
+nums = list(s)
+n = len(nums)
+result = []
+for i in range(1 << n):
+    subset = []
+    subset_sum = 0
+    for j in range(n):
+        if i & (1 << j):
+            subset.append(nums[j])
+            subset_sum = subset_sum + nums[j]
+    # check if subset_sum is prime
+    if subset_sum > 1:
+        count = 0
+        for k in range(1, subset_sum + 1):
+            if subset_sum % k == 0:
+                count = count + 1
+        if count == 2:
+            result.append(subset)
+print(result)
+
+# 18.Check if a set contains a subset of elements that sum up to a specific value
+s = {2, 4, 6, 10}
+target = 16
+nums = list(s)
+n = len(nums)
+found = False
+for i in range(1 << n):
+    subset_sum = 0
+    subset = []
+    for j in range(n):
+        if i & (1 << j):
+            subset_sum += nums[j]
+            subset.append(nums[j])
+    if subset_sum == target:
+        print("Subset found:", subset)
+        found = True
+        break
+if not found:
+    print("No subset found")
+
+# 19.Find the number of elements that appear in exactly one set from a list of sets.
+sets = [{1,2,3}, {3,4,5}, {5,6}]
+all_elements = set()
+for s in sets:
+    for i in s:
+        all_elements.add(i)
+count = 0
+for elem in all_elements:
+    freq = 0    
+    for s in sets:
+        if elem in s:
+            freq += 1
+    if freq == 1:
+        count += 1
+print(count)
+
+# 20.Write a function that finds the union of all sets, but only includes elements that appear more than once across all sets.
+sets = [{1,2,3}, {3,4,5}, {5,6}]
+all_elements = set()
+for s in sets:
+    for i in s:
+        all_elements.add(i)
+result = set()
+for elem in all_elements:
+    count = 0
+    for s in sets:
+        if elem in s:
+            count += 1
+    if count > 1:
+        result.add(elem)
+print(result)
