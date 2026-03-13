@@ -69,23 +69,22 @@ words = sentence.split()
 unique_words = set(words)
 print(unique_words)
 
-# 3.Write a function that takes a list of numbers and returns the largest subset such that the sum of the subset is even.
+# 3.Write a program that takes a list of numbers and returns the largest subset such that the sum of the subset is even.
 numbers = [3, 5, 7]
-def largest_even_subset(numbers):
-    total = 0
+total = 0
 # find total sum
-    for i in numbers:
-        total = total + i
+for i in numbers:
+    total = total + i
 # if sum is even return the whole list
-    if total % 2 == 0:
-        return numbers
+if total % 2 == 0:
+    result = numbers
 # if sum is odd, remove one odd number
+else:
     for i in numbers:
         if i % 2 != 0:
             numbers.remove(i)
             break
-    return numbers
-result = largest_even_subset(numbers)
+    result = numbers
 print(result)
 
 # 4.Given a set of integers, write a function that returns a new set containing all subsets of the original set.
@@ -158,37 +157,35 @@ else:
 
 # 10.Given a set, find the number of distinct subsets where the sum of the elements in each subset is divisible by a given integer.
 numbers = {1, 2, 3}
-k = 3
-def count_subsets_divisible(s, k):
-    nums = list(s)
-    n = len(nums)
-    count = 0
-    for i in range(1 << n):   # generates all subsets
-        subset_sum = 0
-        for j in range(n):
-            if i & (1 << j):
-                subset_sum = subset_sum + nums[j]
-        if subset_sum % k == 0:
-            count = count + 1
-    return count
-print(count_subsets_divisible(numbers, k))
+k = 3   # given integer
+nums = list(numbers)
+n = len(nums)
+count = 0
+# generate all subsets
+for i in range(1 << n):
+    subset_sum = 0    
+    for j in range(n):
+        if (i & (1 << j)) != 0:
+            subset_sum = subset_sum + nums[j]   
+    if subset_sum % k == 0:
+        count = count + 1
+print("Number of subsets:", count)
 
 # 11.Write a program that finds the longest consecutive sequence in an unsorted list of numbers using sets.
 numbers = [100, 4, 200, 1, 3, 2]
-def longest_consecutive(nums):
-    num_set = set(nums)
-    longest = 0
-    for n in num_set:
-        if n - 1 not in num_set:   # start of sequence
-            current = n
-            length = 1
-            while current + 1 in num_set:
-                current = current + 1
-                length = length + 1
-            if length > longest:
-                longest = length
-    return longest
-print(longest_consecutive(numbers))
+numbers.sort()
+longest = 1
+count = 1
+for i in range(len(numbers) - 1):
+    if numbers[i] + 1 == numbers[i + 1]:
+        count = count + 1
+    else:
+        if count > longest:
+            longest = count
+        count = 1
+if count > longest:
+    longest = count
+print(longest)
 
 # 12.Given two sets, find the symmetric difference, but only include elements that appear more than once across both sets.
 set1 = {1, 2, 3, 4}
@@ -264,6 +261,17 @@ for i in range(1 << n):
             result.append(subset)
 print(result)
 
+# 17.Create a set of all permutations of a given list of characters.
+chars = ['a', 'b', 'c']
+permutations = set()
+for i in range(len(chars)):
+    for j in range(len(chars)):
+        for k in range(len(chars)):
+            if i != j and j != k and i != k:
+                perm = chars[i] + chars[j] + chars[k]
+                permutations.add(perm)
+print(permutations)
+
 # 18.Check if a set contains a subset of elements that sum up to a specific value
 s = {2, 4, 6, 10}
 target = 16
@@ -300,7 +308,7 @@ for elem in all_elements:
         count += 1
 print(count)
 
-# 20.Write a function that finds the union of all sets, but only includes elements that appear more than once across all sets.
+# 20.Write a program that finds the union of all sets, but only includes elements that appear more than once across all sets.
 sets = [{1,2,3}, {3,4,5}, {5,6}]
 all_elements = set()
 for s in sets:
