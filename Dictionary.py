@@ -1,45 +1,45 @@
-# # A dictionary in Python is a built-in, mutable, and ordered collection data structure used to store data in key-value pairs. 
-# # Format : {key : word} , {name : narendra}
-# student = {'Name': 'Narendra', 'Age': 28, 'City': 'Pondy'}
-# # print(student)
-
-# # To access specific value
-# print(student['Name'])
-# print(student.get('Name'))
-
-# # To add or update value
-# # print(student['Phone'])  # Through error if we access unknown value
-# print(student.get('Phone'))  # does not show any error, shows None
-
-# # Pop method
-# print(student.pop('Age'))  # remove the value inside the pop
-# print(student.popitem())   # removes the last added value
-
-# # Delete Method
-# del student['Age']
+# A dictionary in Python is a built-in, mutable, and ordered collection data structure used to store data in key-value pairs. 
+# Format : {key : word} , {name : narendra}
+student = {'Name': 'Narendra', 'Age': 28, 'City': 'Pondy'}
 # print(student)
 
-# # Clear Method
-# student.clear()
-# print(student)
+# To access specific value
+print(student['Name'])
+print(student.get('Name'))
 
-# # To print full dictionary
-# print(student.items())
+# To add or update value
+# print(student['Phone'])  # Through error if we access unknown value
+print(student.get('Phone'))  # does not show any error, shows None
 
-# # For Loop
-# for key,value in student.items() : # print both key and values.
-#     print(key, value)
+# Pop method
+print(student.pop('Age'))  # remove the value inside the pop
+print(student.popitem())   # removes the last added value
 
-# for i in student : # print only key.
-#     print(i)
+# Delete Method
+del student['Age']
+print(student)
 
-# # Nested Dictionary :
-# # Nested Dictionary
-# details = {
-#     'student1': {'Name': 'Narendra', 'Age': 28, 'City': 'Pondy'},
-#     'student2': {'Name': 'Vijay', 'Age': 50, 'City': 'Chennai'}
-# }
-# print(details)
+# Clear Method
+student.clear()
+print(student)
+
+# To print full dictionary
+print(student.items())
+
+# For Loop
+for key,value in student.items() : # print both key and values.
+    print(key, value)
+
+for i in student : # print only key.
+    print(i)
+
+# Nested Dictionary :
+# Nested Dictionary
+details = {
+    'student1': {'Name': 'Narendra', 'Age': 28, 'City': 'Pondy'},
+    'student2': {'Name': 'Vijay', 'Age': 50, 'City': 'Chennai'}
+}
+print(details)
 
 # 1.Count Frequency of Elements Given a list, create a dictionary that stores the frequency of each element.
 numbers = [1,2,2,3,3,3,4]
@@ -125,3 +125,45 @@ d = {}
 for i in range(len(keys)):
     d[keys[i]] = values[i]
 print(d)
+
+# Task
+# 1.Find the total.
+mydict = {'name' : 'Narendra',
+          'marks' : [86,90,80,95,90]
+}
+sum = 0
+for i in mydict['marks'] :
+ sum = sum + i
+print('total:',sum)
+
+# 2.Find the total and rank.
+Students = [
+    {'Name1': 'Narendra','Marks1': [86,90,80,95,90]},
+    {'Name2': 'Venkat','Marks2': [86,85,68,70,85]},
+    {'Name3': 'Srini','Marks3': [65,90,95,75,80]},
+    {'Name4': 'Siddhu','Marks4': [78,85,98,89,63]},
+    {'Name5': 'Prakash','Marks5': [52,78,88,85,68]}
+]
+result = []
+for student in Students:
+    for key in student:
+        if "Name" in key:
+            name = student[key]
+        if "Marks" in key:
+            total = 0
+            for m in student[key]:
+                total = total + m
+    result.append([name, total])
+# sorting manually (highest marks first)
+for i in range(len(result)):
+    for j in range(i+1, len(result)):
+        if result[i][1] < result[j][1]:
+            temp = result[i]
+            result[i] = result[j]
+            result[j] = temp
+# print ranks
+rank = 1
+for r in result:
+    print("Rank", rank, ":", r[0], "Total Marks =", r[1])
+    rank = rank + 1
+
