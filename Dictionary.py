@@ -7,9 +7,14 @@ student = {'Name': 'Narendra', 'Age': 28, 'City': 'Pondy'}
 print(student['Name'])
 print(student.get('Name'))
 
-# To add or update value
+# To check key and value
 # print(student['Phone'])  # Through error if we access unknown value
 print(student.get('Phone'))  # does not show any error, shows None
+
+# To add or update value
+student['Age'] = 29 # to change the value in dictionary
+student.update({'course': 'Data Analyst'}) # to update the key and value in dictionary
+print(student)
 
 # Pop method
 print(student.pop('Age'))  # remove the value inside the pop
@@ -167,3 +172,60 @@ for r in result:
     print("Rank", rank, ":", r[0], "Total Marks =", r[1])
     rank = rank + 1
 
+# Self Task
+# 1.Write a program to print only the keys d = {"a":10, "b":20, "c":30}.
+d = {"a":10, "b":20, "c":30}
+for i in d.keys() :
+    print(i)
+
+# 2.Write a program to print only the values d = {"a":10, "b":20, "c":30}.
+d = {"a":10, "b":20, "c":30} 
+for i in d.values():
+    print(i)
+
+# 3.Write a program to print key and value d = {"a":10, "b":20, "c":30}.
+d = {"a":10, "b":20, "c":30}
+for key, value in d.items() :
+    print(key,value)
+
+# 4.Write a program to print sum of all values d = {"a":10, "b":20, "c":30}.
+d = {"a":10, "b":20, "c":30}
+sum = 0
+for i in d :
+    sum = sum + d[i]
+print(sum)
+
+# 5.Write a program to print count number of items d = {"a":10, "b":20, "c":30}.
+d = {"a":10, "b":20, "c":30}
+count = 0
+for i in d.items():
+    count += 1
+print(count)
+
+# 6.Write a program to check if key exists d = {"name":"Narendra", "age":28, "city":"Pondy"}.
+d = {"name":"Narendra", "age":28, "city":"Pondy"}
+if "age" in d:
+    print("Key exists")
+
+# 7.Write a program to add a new key d = {"a":10, "b":20}.
+d = {"a":10, "b":20}
+d["c"] = 30
+print(d)
+
+# 8.Write a program to d = {"a":10, "b":20} change value of "a" to 100.
+d = {"a":10, "b":20}
+d["a"] = 100
+print(d)
+
+# 9.Write a program to remove a key "b" d = {"a":10, "b":20, "c":30}.
+d = {"a":10, "b":20, "c":30}
+d.pop('b')
+print(d)
+
+# 10.Write a program to find largest value d = {"a":10, "b":50, "c":30}.
+d = {"a":10, "b":50, "c":30}
+largest = 0
+for i in d.values():
+    if i > largest:
+        largest = i
+print(largest)
