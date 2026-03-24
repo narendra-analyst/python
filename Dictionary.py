@@ -230,78 +230,176 @@
 #         largest = i
 # print(largest)
 
-# 11.Write a program to count total values greater than 20 d = {"a":10, "b":25, "c":30, "d":5}.
-d = {"a":10, "b":25, "c":30, "d":5}
-count = 0
-for i in d :
-    if d[i] > 20 :
-        count += d[i]
-print(count)
+# # 11.Write a program to count total values greater than 20 d = {"a":10, "b":25, "c":30, "d":5}.
+# d = {"a":10, "b":25, "c":30, "d":5}
+# count = 0
+# for i in d :
+#     if d[i] > 20 :
+#         count += d[i]
+# print(count)
 
-# 12.Write a program to print only keys with even values d = {"a":10, "b":15, "c":20, "d":25}.
-d = {"a":10, "b":15, "c":20, "d":25}
-for i in d :
-    if d[i] %2 == 0 :
-        print('even:',d[i])
+# # 12.Write a program to print only keys with even values d = {"a":10, "b":15, "c":20, "d":25}.
+# d = {"a":10, "b":15, "c":20, "d":25}
+# for i in d :
+#     if d[i] %2 == 0 :
+#         print('even:',d[i])
 
-# 13.Write a program to multiply all values d = {"a":2, "b":3, "c":4}.
-d = {"a":2, "b":3, "c":4}
-total = 1
-for i in d.values():
-    total = total * i
-print("total:", total)
+# # 13.Write a program to multiply all values d = {"a":2, "b":3, "c":4}.
+# d = {"a":2, "b":3, "c":4}
+# total = 1
+# for i in d.values():
+#     total = total * i
+# print("total:", total)
 
-# 14.Write a program to create a new dictionary with squared values d = {"a":2, "b":3, "c":4}.
-d = {"a":2, "b":3, "c":4}
-new_d = {}
-for key, value in d.items():
-    new_d[key] = value * value
-print(new_d)
+# # 14.Write a program to create a new dictionary with squared values d = {"a":2, "b":3, "c":4}.
+# d = {"a":2, "b":3, "c":4}
+# new_d = {}
+# for key, value in d.items():
+#     new_d[key] = value * value
+# print(new_d)
 
-# 15.write a program to find smallest value d = {"a":10, "b":5, "c":30}.
-d = {"a":10, "b":5, "c":30}
-smallest = list(d.values())[0]
-for i in d.values():
-    if i < smallest:
-        smallest = i
-print("smallest:", smallest)
+# # 15.write a program to find smallest value d = {"a":10, "b":5, "c":30}.
+# d = {"a":10, "b":5, "c":30}
+# smallest = list(d.values())[0]
+# for i in d.values():
+#     if i < smallest:
+#         smallest = i
+# print("smallest:", smallest)
 
-# 16.Write a program to count how many times value appears d = {"a":10, "b":20, "c":10, "d":30}.
-d = {"a":10, "b":20, "c":10, "d":30}
-count = 0
-for i in d.values():
-    if i == 10 :
-        count = count + i
-print(count)
+# # 16.Write a program to count how many times value appears d = {"a":10, "b":20, "c":10, "d":30}.
+# d = {"a":10, "b":20, "c":10, "d":30}
+# count = 0
+# for i in d.values():
+#     if i == 10 :
+#         count = count + i
+# print(count)
 
-# 17.Write a program to print dictionary in reverse order (keys) d = {"a":10, "b":20, "c":30}.
-d = {"a":10, "b":20, "c":30}
-keys = list(d.keys())
-for i in keys[::-1]:
-    print(i)
+# # 17.Write a program to print dictionary in reverse order (keys) d = {"a":10, "b":20, "c":30}.
+# d = {"a":10, "b":20, "c":30}
+# keys = list(d.keys())
+# for i in keys[::-1]:
+#     print(i)
 
-# 18.Write a program to create dictionary from two lists keys = ["a", "b", "c"] values = [10, 20, 30].
-keys = ["a", "b", "c"]
-values = [10, 20, 30]
-d = {}
-for i in range(len(keys)):
-        d[keys[i]] = values[i]
-print(d)
+# # 18.Write a program to create dictionary from two lists keys = ["a", "b", "c"] values = [10, 20, 30].
+# keys = ["a", "b", "c"]
+# values = [10, 20, 30]
+# d = {}
+# for i in range(len(keys)):
+#         d[keys[i]] = values[i]
+# print(d)
 
-# 19.Write a program to remove items with value less than 20 d = {"a":10, "b":25, "c":5, "d":30}.
-d = {"a":10, "b":25, "c":5, "d":30}
-new_d = {}
-for key, value in d.items():
-    if value >= 20:
-        new_d[key] = value
-print(new_d)
+# # 19.Write a program to remove items with value less than 20 d = {"a":10, "b":25, "c":5, "d":30}.
+# d = {"a":10, "b":25, "c":5, "d":30}
+# new_d = {}
+# for key, value in d.items():
+#     if value >= 20:
+#         new_d[key] = value
+# print(new_d)
 
-# 20.Write a program to find key with maximum value d = {"a":10, "b":50, "c":30}.
-d = {"a":10, "b":50, "c":30}
-max_value = list(d.values())[0]
-max_key = ""
-for key, value in d.items():
-    if value > max_value:
-        max_value = value
-        max_key = key
-print(max_key)
+# # 20.Write a program to find key with maximum value d = {"a":10, "b":50, "c":30}.
+# d = {"a":10, "b":50, "c":30}
+# max_value = list(d.values())[0]
+# max_key = ""
+# for key, value in d.items():
+#     if value > max_value:
+#         max_value = value
+#         max_key = key
+# print(max_key)
+
+# # Self Task
+# mydict = {'name': 'Narendra',
+#           'marks': [86,90,80,95,90]
+# }
+
+# total = 0
+
+# for i in range(len(mydict['marks'])):
+#     total = total + mydict['marks'][i]
+
+# print("Total:", total)
+
+# 1.Write a program to find the total marks and arrange them from 1 to 5 rank.
+# Students = [
+#     {'Name': 'Narendra','Marks': [86,90,80,95,90]},
+#     {'Name': 'Venkat','Marks': [86,85,68,70,85]},
+#     {'Name': 'Srinivasan','Marks': [65,90,95,75,80]},
+#     {'Name': 'Sidtharthan','Marks': [78,85,98,89,63]},
+#     {'Name': 'Prakash','Marks': [52,78,88,85,68]}
+# ]
+# result = []
+# for student in Students:
+#     for key in student:
+#         if "Name" in key:
+#             name = student[key]
+#         if "Marks" in key:
+#             total = 0
+#             for m in student[key]:
+#                 total = total + m
+#     result.append([name, total])
+# # sorting manually (highest marks first)
+# for i in range(len(result)):
+#     for j in range(i+1, len(result)):
+#         if result[i][1] < result[j][1]:
+#             temp = result[i]
+#             result[i] = result[j]
+#             result[j] = temp
+# # print ranks
+# rank = 1
+# for r in result:
+#     print("Rank", rank, ":", r[0], "Total Marks =", r[1])
+#     rank = rank + 1
+
+
+# #simple method 
+# result = []
+# # find total marks
+# for s in Students:
+#     total = sum(s['Marks'])   # easy sum
+#     result.append([s['Name'], total])
+# # sort (highest first)
+# result.sort(reverse=True, key=lambda x: x[1])
+# # print rank
+# rank = 1
+# for r in result:
+#     print("Rank", rank, ":", r[0], "Total =", r[1])
+#     rank = rank + 1
+
+
+# n = len(Students)
+
+# for i in range(n):
+#     for j in range(0, n - i - 1):
+#         if Students[j]['Total'] < Students[j + 1]['Total']:
+#             # swap
+#             temp = Students[j]
+#             Students[j] = Students[j + 1]
+#             Students[j + 1] = temp
+
+Students = [
+    {'Name': 'Narendra','Marks': [86,90,80,95,90]},
+    {'Name': 'Venkat','Marks': [86,85,68,70,85]},
+    {'Name': 'Srinivasan','Marks': [65,90,95,75,80]},
+    {'Name': 'Sidtharthan','Marks': [78,85,98,89,63]},
+    {'Name': 'Prakash','Marks': [52,78,88,85,68]}
+]
+for s in Students:
+    print(s)
+    total = 0
+    for i in s['Marks']:
+        # print(i)
+        total = total + i
+        print(total)
+        s['total'] = total
+# sort
+n = len(Students)
+for i in range(n):
+    for j in range(0,n-i-1):
+        if Students[j]['total'] < Students[j+1]['total']:
+            temp = Students[j]
+            Students[j] = Students[j+1]
+            Students[j+1] = temp
+rank = 1
+for s in Students:
+    print("Rank", rank, ":", s['Name'], "- total:", s['total'])
+    rank = rank + 1
+
