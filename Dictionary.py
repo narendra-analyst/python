@@ -336,3 +336,18 @@ students = [
 for s in students:
     if s['Name': 'A', 'total': 50]  > s['Name': 'B', 'total': 80] :
         print(s)
+
+# 24.Write a program to sort in descending order.
+students = [
+    {'Name': 'A', 'total': 70},
+    {'Name': 'B', 'total': 90},
+    {'Name': 'C', 'total': 80}
+]
+n=len(students)
+for i in range(n):
+    for j in range(n-1):
+        if students[j]['total'] < students[j+1]['total']:
+            temp = students[j]
+            students[j] = students[j+1]
+            students[j+1] = temp
+print(students)
