@@ -351,3 +351,51 @@ for i in range(n):
             students[j] = students[j+1]
             students[j+1] = temp
 print(students)
+
+# 24.Write a program to create a dictionary with 5 country - capital pairs, print all keys and values separately.
+countries = {
+    "India": "New Delhi",
+    "USA": "Washington D.C",
+    "France": "Paris",
+    "Japan": "Tokyo",
+    "Australia": "Canberra"
+}
+for key in countries:
+    print(key)
+for value in countries.values():
+    print(value)
+
+# 25.Write a program to create a dictionary of numbers (1 to 5) where values are their squares. #output {1:1,2:4.....}.
+d = {}
+for i in range(1, 6):
+    d[i] = i * i 
+print(d)
+
+# 26.write a program to Merge two dictionaries. If keys are same add their values
+d1 = {"a":10, "b":20, "c":30}
+d2 = {"d":20, "b":30, "f":40}
+result = {}
+for key in d1:
+    result[key] = d1[key]
+for key in d2:
+    if key in result:
+        result[key] = result[key] + d2[key]   # add values if key same
+    else:
+        result[key] = d2[key]                 # add new key
+print(result)
+
+# 27.Write a program to Invert a dictionary (key become values and value become key).
+d = {'a':10,'b':20,'c':30}
+new_d = {}
+for key in d:
+    value = d[key]
+    new_d[value] = key
+print(new_d)
+    
+# 28.Write a program to create a nested dictionary for 3 students with : Name, Age, Marks.
+details = {
+    'student1' : {'name':'tony', 'age' : 28 , 'marks' : 450},
+    'student2' : {'name':'stark', 'age' : 28 , 'marks' : 480}
+}
+print(details)
+
