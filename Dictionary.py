@@ -395,7 +395,8 @@ print(new_d)
 # 28.Write a program to create a nested dictionary for 3 students with : Name, Age, Marks.
 details = {
     'student1' : {'name':'tony', 'age' : 28 , 'marks' : 450},
-    'student2' : {'name':'stark', 'age' : 28 , 'marks' : 480}
+    'student2' : {'name':'stark', 'age' : 38 , 'marks' : 480},
+    'student3' : {'name':'steve', 'age' : 38 , 'marks' : 460},
 }
 print(details)
 
