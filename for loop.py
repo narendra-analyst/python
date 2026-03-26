@@ -22,7 +22,7 @@ for i in range (1,10):
 # 2. Write a program to print even numbers from 1 to 20 using a for loop.
 for even in range (1,20):
   if even %2==0 : 
-   print(even)
+   print('result:',even)
 
 # 3. Write a program to print odd numbers from 1 to 20 using a for loop.
 for odd in range (1,20):
