@@ -112,7 +112,7 @@ result=factorial(5)
 print(f'the factorial of 5 is {result}')
 
 # Function Task:
-#1.Write a program to check even or odd using function.
+#1.write a program to check even or odd using function.
 num = 16
 def even():
       if num % 2 == 0:
@@ -122,7 +122,7 @@ def even():
 result=even()
 print(f'the number 16 is {result}')
 
-# 2.write a program to check the number 6 is divisible by 2 and 3.
+# 2.write a program to check the number 6 is divisible by 2 and 3 using function.
 n=6
 def divisible():
       if n %2 %3 == 0 :
@@ -131,3 +131,72 @@ def divisible():
        return'6 is not divisible by 2 and 3'
 result=divisible()
 print(f'the number {result}')
+
+# 3.write a program to find greater of two numbers a = 20 and b = 30 using function.
+def greater(a,b):
+     if a > b :
+      return 'greater number is a'
+     else:
+      return 'greater number is b'
+result=greater(20,30)
+print(f'the {result}')
+
+# 4.write a program to check vowel or consonant using function.
+def check_char(ch):
+     if ch in ('a','e','i','o','u'):
+       return 'is vowel'
+     else:
+        return 'is consonant'
+result= check_char('a')
+print(f'the character {result}')
+
+# 5.write a program using a function to check whether a given number is positive, negative, or zero.
+def check_num(number):
+     if number > 0 :
+          return 'is positive'
+     elif number < 0 :
+          return 'is negative'
+     else:
+          return 'is zero'
+result=check_num(6)
+print(f'the number {result}')
+
+# 6.Write a program using a function to print numbers from 1 to 10 and also use for loop.
+def num():
+        for i in range(1,11):
+             print(i)
+num()
+
+# 7.Write a function to print all even numbers from 1 to 20 using a for loop.
+def check_num():
+     for even in range(1,20):
+          if even % 2 == 0 :
+               print(even)
+check_num()
+
+# 8.Write a function to find the sum of numbers from 1 to n (n is given as input).
+def check_num(n):
+     total = 0
+     for i in range (1,n+1):
+          total = total + i
+     return total
+result = check_num(10)
+print(result)
+
+# 9.Write a function to print the multiplication table of a given number.
+def check_num(n):
+    for i in range(1, 11):
+        print(i * n)
+check_num(3)
+
+# 10.Write a function to count how many vowels are present in a given string using a for loop.
+def check_char(text):
+     count = 0
+     for ch in text:
+        if ch in ('a', 'e', 'i', 'o', 'u'):
+                count = count + 1
+     return count
+result=check_char('narendra')
+print(f'Total no. of vowel is {result}')
+
+
