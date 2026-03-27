@@ -199,4 +199,95 @@ def check_char(text):
 result=check_char('narendra')
 print(f'Total no. of vowel is {result}')
 
+# 11.Write a function to count how many consonants are in a string.
+def check_char(text):
+    count = 0
+    for ch in text:
+        if ch not in ('a', 'e', 'i', 'o', 'u'):
+            count = count + 1
+    return count
+result = check_char('narendra')
+print(f'Total no. of consonants is {result}')
 
+# 12.Write a function to reverse a given string using a for loop.
+def reverse_string(text):
+     rev = ""
+     for ch in text:
+          rev = ch + rev
+     return rev
+result = reverse_string('tony stark')
+print(result)
+          
+# 13.Write a function to count how many digits are present in a string.
+def check_string(text):
+     count = 0
+     for ch in text:
+          if ch.isdigit():
+               count = count + 1
+     return count
+result = check_string('narendra1997')
+print(f'the no. of digits is {result}')
+
+# 14.Write a function to find the largest number in a list.
+def check_largest(num):
+     largest = num[0]
+     for i in num :
+          if i > largest :
+               largest = i
+     return largest
+result = check_largest([10,30,50,20,60,40])
+print(f'the largest no. is {result}')
+
+# 15.Write a function to count how many even numbers are in a list.
+def check_even(num):
+     count = 0
+     for i in num :
+          if i % 2 == 0 :
+               count = count + 1
+     return count
+result=check_even([2,3,12,5,16,14,18,15,9,10])
+print(f'There are {result} even numbers in a list')
+
+# 16.Write a function to find the sum of all elements in a list.
+def sum(num):
+     total = 0
+     for i in num:
+          total = total + i
+     return total
+result = sum([15,9,6,22,25,30])
+print(f'Total : {result}')
+
+# 17.Write a function to print each character of a string using a for loop.
+def check_char(text):
+     for ch in text:
+         print(ch)
+result=check_char('hello world')
+
+# 18.Write a function to count how many spaces are in a string.
+def check_space(text):
+     count = 0
+     for ch in text:
+          if ch in " ":
+               count += 1
+     return count
+result=check_space('hello world')
+print(f'space : {result}')
+
+# 19.Write a function to check whether a string is a palindrome.
+def check_palindrome(text):
+     rev = ""
+     for ch in text:
+          rev = ch + rev
+          if text == rev:
+               return rev
+result=check_palindrome('madam')
+print(f'{result} is a palindrome')
+
+# 20.Write a function to find the factorial of a number using a for loop.
+def chek_factorial(n):
+     if n==0 or n==1:
+          return 1
+     else:
+          return n*factorial(n-1)
+result=chek_factorial(6)
+print(f'the factorial of 6 is {result}')
