@@ -1,4 +1,29 @@
 #conditional statement- if and else, in this statement it always recieves only string value wether we enter integer or string in the variable, because it is as default string value only.
+# Examples:
+age = 21
+if age >= 18:
+   print("eligible to vote")
+else:
+   print("Not eligible to vote")
+
+n = int(input("Enter n value: "))
+if n>= 0:
+    print("+ve")
+else:
+    print("-ve")
+
+userName = input("Enter your name : ")
+print(userName)
+
+shop1 = input("Enter your total bill amount in shop1: ")
+shop2 = input("Enter your total bill amount in shop2: ")
+print(shop1)
+print(shop2)
+
+totalAmountToPay = int(shop1) + int(shop2)
+print(totalAmountToPay)
+
+# Task:
 #1.Check even or odd
 num = 16
 if num %2 == 0 :

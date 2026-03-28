@@ -291,3 +291,53 @@ def chek_factorial(n):
           return n*factorial(n-1)
 result=chek_factorial(6)
 print(f'the factorial of 6 is {result}')
+
+# 21.Write a function to count how many uppercase letters are in a string.
+def check_uppercase(text):
+     count = 0
+     for ch in text:
+          if ch.isupper():
+               count += 1
+     return count
+result=check_uppercase('NaredrA StarK')
+print(f'Total no. of uppercase is: {result}')
+     
+# 22.Write a function to count how many special characters (like @, #, $, %) are in a string.
+def check_special(text):
+     count = 0
+     for ch in text:
+          if ch in ('%','@','#','$'):
+               count += 1
+     return count
+result=check_special('Narendra@15#09')
+print(f'Total no. of special characters are : {result}')
+
+# 23.Write a function to find the length of a string using a for loop.
+def check_len(text):
+    count = 0
+    for ch in text:
+        count += 1
+    return count
+result = check_len('narendra')
+print(result)
+
+# 24.Write a function to count how many words are in a string.
+def words(text):
+     count=0
+     for ch in text:
+          if ch == " " :
+               count += 1
+     return count + 1  # words = spaces + 1
+result=words('hello world python')
+print(f'Total no. of words : {result}')
+
+# 25.Write a function to remove all vowels from a string and return the new string.
+def remove(text):
+     new_string = " "
+     for ch in text:
+          if ch not in ('a','e','i','o','u'):
+               new_string = new_string + ch
+     return new_string
+result=remove('hello')
+print(f'the new string : {result}')
+

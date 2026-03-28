@@ -1,4 +1,4 @@
-#implicit conversion
+# implicit - automatically convert one type to another
 #int
 a=15
 b=22
@@ -16,7 +16,7 @@ print(type(x))
 num="50"
 print(type(num))
 
-#explicit
+# explicit - manually convert one type to another
 #inttostr
 d=25
 InttoStr=str(d)
@@ -58,6 +58,11 @@ tupletolist=list(myTuple)
 print(type(tupletolist))
 
 #tupletoset
-mySet={50,"name",18.5}
-tupletoset
+myTuple=(20,30,40)
+tupletoset=set(myTuple)
+print(type(tupletoset))
 
+#settotuple
+mySet={50,"name",18.5}
+settotuple=tuple(mySet)
+print(type(settotuple))
