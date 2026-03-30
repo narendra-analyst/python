@@ -111,6 +111,47 @@ def factorial(n):
 result=factorial(5)
 print(f'the factorial of 5 is {result}')
 
+# Map Function:
+# The map function in python is used to apply a function to every item in an iterable (like tuple,list etc.,) and return a map object (which is an iterator).
+# syntax: map(function,iterable)
+# Eg:
+def square(a):
+     return a * a
+numbers = [1,2,3,4]
+result=map(square,numbers)
+print(list(result))
+
+# Eg for using lambda method:
+numbers=[1,2,3,4]
+myData=map(lambda x:x*2,numbers)
+print(list(numbers))
+
+# Filter Function:
+# The filter() function in python is used to select (filter out) elements form an iterable based on conditions. (It filters only the 'True' conditions)
+# syntax filter:(function,iterable)
+# Eg:
+def is_even(x):
+    return x % 2 == 0
+nums = [1, 2, 3, 4, 5, 6]
+result = list(filter(is_even, nums))
+print(result)
+
+# Eg for using lambda method:
+nums = [1, 2, 3, 4, 5, 6]
+result = list(filter(lambda x: x % 2 == 0, nums))
+print(result)
+
+# Reduce Function:
+# The reduce() function in python is used to apply a function cumulatively to the items of an iterable, reducing it to a simple value.
+# syntax: reduce(function,iterable)
+from functools import reduce
+def add(x, y):
+    return x + y
+nums = [1, 2, 3, 4]
+result = reduce(add, nums)
+print(result)
+
+
 # Function Task:
 #1.write a program to check even or odd using function.
 num = 16
