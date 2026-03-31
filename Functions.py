@@ -112,7 +112,7 @@ result=factorial(5)
 print(f'the factorial of 5 is {result}')
 
 # Map Function:
-# The map function in python is used to apply a function to every item in an iterable (like tuple,list etc.,) and return a map object (which is an iterator).
+# The map() function in python is used to apply a function to every item in an iterable (like tuple,list etc.,) and return a map object (which is an iterator).
 # syntax: map(function,iterable)
 # Eg:
 def square(a):
