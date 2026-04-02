@@ -63,3 +63,15 @@ with open("data.txt", "w") as file:
     file.write("Hello")
 # Here Python automatically closes the file for you
 
+# In Python, rename() is a function used to change the name of a file or folder.
+# Where it comes from?
+# rename() is part of the os module.
+# import os
+# os.rename(old_name, new_name)
+# old_name → current file name
+# new_name → new file name you want
+import os
+os.rename("data.txt", "new.txt")
+# What happens?
+# If data.txt exists
+# It will be renamed to new.txt

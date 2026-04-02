@@ -35,48 +35,66 @@ print(Modules1.add(2, 3))
 # pip install pandas
 
 # Collections module:
-# The collections module is a Python module that gives special data structures (advanced versions of list, dict, tuple).
+# The collections module is a built-in Python module that provides special data types (like advanced versions of list, dict, tuple).
+# In simple words:
+# It gives you better, smarter containers to store and manage data.
 
 # Types of collections module:
 # 1. Counter (Counting made easy)
-# Used to count elements automatically
+# Used to count frequency of items
+# Eg:
 from collections import Counter
-data = ['a', 'b', 'a', 'c', 'a']
-print(Counter(data))
+data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+result = Counter(data)
+print(result)
+
+# It counts how many times each item appears
 # Counting words, votes, product sales
 
 # 2.defaultdict  (No key error)
-# Normal dict gives error if key not found
-# defaultdict gives default value
+# Like dictionary, but no error for missing key
+# defaultdict gives default value (0 here)
+# Eg:
 from collections import defaultdict
 d = defaultdict(int)
 d['a'] += 1
+d['b'] += 2
 print(d)
+
 # Use case: counting, grouping data
 
 # 3.namedtuple (Tuple with names)
 # Access values using names instead of index
+# Like tuple, but with names (more readable)
+# Eg:
 from collections import namedtuple
 Student = namedtuple('Student', ['name', 'age'])
-s = Student('Narendra', 28)
+s = Student('Tony', 28)
 print(s.name)
-# Easier to read than normal tuple
+print(s.age)
+
+# Instead of s[0], you use s.name
 
 # 4.deque (Fast insert/remove)
-# Fast add/remove from both ends
-# Works like queue (FIFO) and stack
+# FFast list for adding/removing from both sides
+# Eg:
 from collections import deque
 d = deque([1, 2, 3])
-d.appendleft(0)
+d.append(4)        # add right
+d.appendleft(0)    # add left
 print(d)
 
+# Faster than list for queue operations
+
 # 5.OrderedDict (Keeps order)
-# Stores items in insertion order
+# Dictionary that remembers insertion order
+# Eg:
 from collections import OrderedDict
 d = OrderedDict()
 d['a'] = 1
 d['b'] = 2
 print(d)
+
 
 # What is random()?
 # The random module provides functions to generate random values.
