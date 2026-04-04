@@ -1,124 +1,151 @@
-# What is Module?
-# A module is just a file that contains Python code (functions, variables, classes).
-# Instead of writing everything in one file, we divide code into modules.
-# eg:
-import Modules1
-Modules1.greet()
+# # What is Module?
+# # A module is just a file that contains Python code (functions, variables, classes).
+# # Instead of writing everything in one file, we divide code into modules.
+# # eg:
+# import Modules1
+# Modules1.greet()
 
-# 1.Why modules are used?
-# Reuse code
-# Make code organized
-# Avoid writing same code again
+# # 1.Why modules are used?
+# # Reuse code
+# # Make code organized
+# # Avoid writing same code again
 
-# Types of Modules in Python:
-# 1. Built-in Modules
-# These are already available in Python.
-# Eg:
-# math module → math operations
-# random module → random numbers
-# datetime module → date & time
-# collections module → advanced data structures
-import math
-print(math.sqrt(16))
+# # Types of Modules in Python:
+# # 1. Built-in Modules
+# # These are already available in Python.
+# # Eg:
+# # math module → math operations
+# # random module → random numbers
+# # datetime module → date & time
+# # collections module → advanced data structures
+# import math
+# print(math.sqrt(16))
 
-# 2. User-defined Modules
-# Modules created by you (user).
-# Eg:
-import Modules1
-print(Modules1.add(2, 3))
+# # 2. User-defined Modules
+# # Modules created by you (user).
+# # Eg:
+# import Modules1
+# print(Modules1.add(2, 3))
 
-# 3. Third-party Modules:
-# Modules created by others (not built-in).
-# Eg:
-# pandas
-# numpy
-# pip install pandas
+# # 3. Third-party Modules:
+# # Modules created by others (not built-in).
+# # Eg:
+# # pandas
+# # numpy
+# # pip install pandas
 
-# Collections module:
-# The collections module is a built-in Python module that provides special data types (like advanced versions of list, dict, tuple).
-# In simple words:
-# It gives you better, smarter containers to store and manage data.
+# # Collections module:
+# # The collections module is a built-in Python module that provides special data types (like advanced versions of list, dict, tuple).
+# # In simple words:
+# # It gives you better, smarter containers to store and manage data.
 
-# Types of collections module:
-# 1. Counter (Counting made easy)
-# Used to count frequency of items
-# Eg:
-from collections import Counter
-data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
-result = Counter(data)
-print(result)
+# # Types of collections module:
+# # 1. Counter (Counting made easy)
+# # Used to count frequency of items
+# # Eg:
+# from collections import Counter
+# data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+# result = Counter(data)
+# print(result)
 
-# It counts how many times each item appears
-# Counting words, votes, product sales
+# # It counts how many times each item appears
+# # Counting words, votes, product sales
 
-# 2.defaultdict  (No key error)
-# Like dictionary, but no error for missing key
-# defaultdict gives default value (0 here)
-# Eg:
-from collections import defaultdict
-d = defaultdict(int)
-d['a'] += 1
-d['b'] += 2
+# # 2.defaultdict  (No key error)
+# # Like dictionary, but no error for missing key
+# # defaultdict gives default value (0 here)
+# # Eg:
+# from collections import defaultdict
+# d = defaultdict(int)
+# d['apple'] += 10
+# d['banana'] += 20
+# print(d['cherries'])
+# print(d)
+
+# # Use case: counting, grouping data
+
+# # 3.namedtuple (Tuple with names)
+# # Access values using names instead of index
+# # Like tuple, but with names (more readable)
+# # Eg:
+# from collections import namedtuple
+# Student = namedtuple('Student', ['name', 'age'])
+# s = Student('Tony', 28)
+# print(s.name)
+# # print(s.age)
+
+# # Instead of s[0], you use s.name
+
+# # 4.deque (Fast insert/remove)
+# # FFast list for adding/removing from both sides
+# # Eg:
+# from collections import deque
+# d = deque([1, 2, 3])
+# d.append(4)        # add right
+# d.appendleft(0)    # add left
+# # d.remove(2)
+# print(d)
+
+# # Faster than list for queue operations
+
+# # 5.OrderedDict (Keeps order)
+# # Dictionary that remembers insertion order
+# # Eg:
+# from collections import OrderedDict
+# d = OrderedDict() 
+# d['a'] = 1
+# d['b'] = 2
+# print(d)
+
+
+# # What is random()?
+# # The random module provides functions to generate random values.
+# # random() is one of its functions.
+
+# # random() Function:
+# # It gives a random decimal number between 0 and 1
+# import random
+# print(random.random())
+# # Output will change every time you run the program.
+
+# # Other Useful Functions in random module
+# # 1. randint() Random integer
+# import random
+# print(random.randint(1, 10))
+# # Output: any number between 1 and 10
+
+# # 2.choice() Pick random item
+# import random
+# names = ['a', 'b', 'c']
+# print(random.choice(names))
+
+# # 3.shuffle() Shuffle list
+# import random
+# nums = [1, 2, 3, 4]
+# random.shuffle(nums)
+# print(nums)
+
+# datetime module:
+# It is a python built-in module, we use with,we use with datetime, and time interval and it's very important for data analysis, logging and automation task.
+# types in datetime module:
+# date
+# time
+# datetime
+# timedelta(datetime difference)
+
+# to find current date:
+from datetime import datetime
+now = datetime.today()
+print(now)
+
+# to find custom date:
+from datetime import date
+d = date(2026,4,4)
 print(d)
 
-# Use case: counting, grouping data
+# to find custom time:
+from datetime import time
+t = time(12,11,00)
+print(t)
 
-# 3.namedtuple (Tuple with names)
-# Access values using names instead of index
-# Like tuple, but with names (more readable)
-# Eg:
-from collections import namedtuple
-Student = namedtuple('Student', ['name', 'age'])
-s = Student('Tony', 28)
-print(s.name)
-print(s.age)
-
-# Instead of s[0], you use s.name
-
-# 4.deque (Fast insert/remove)
-# FFast list for adding/removing from both sides
-# Eg:
-from collections import deque
-d = deque([1, 2, 3])
-d.append(4)        # add right
-d.appendleft(0)    # add left
-print(d)
-
-# Faster than list for queue operations
-
-# 5.OrderedDict (Keeps order)
-# Dictionary that remembers insertion order
-# Eg:
-from collections import OrderedDict
-d = OrderedDict()
-d['a'] = 1
-d['b'] = 2
-print(d)
-
-
-# What is random()?
-# The random module provides functions to generate random values.
-# random() is one of its functions.
-
-# random() Function:
-# It gives a random decimal number between 0 and 1
-import random
-print(random.random())
-# Output will change every time you run the program.
-
-# Other Useful Functions in random module
-# 1. randint() Random integer
-import random
-print(random.randint(1, 10))
-# Output: any number between 1 and 10
-
-# 2.choice() Pick random item
-import random
-names = ['a', 'b', 'c']
-print(random.choice(names))
-
-# 3.shuffle() Shuffle list
-import random
-nums = [1, 2, 3, 4]
-random.shuffle(nums)
-print(nums)
+# 

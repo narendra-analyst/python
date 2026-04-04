@@ -74,4 +74,3 @@ import os
 os.rename("data.txt", "new.txt")
 # What happens?
 # If data.txt exists
-# It will be renamed to new.txt
