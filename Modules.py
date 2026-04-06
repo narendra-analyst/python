@@ -125,68 +125,119 @@
 # random.shuffle(nums)
 # print(nums)
 
-# datetime module:
-# What is Date & Time Module?
-# In Python, we use the built-in datetime module to work with:
-# Current date
-# Current time
-# Formatting date/time
-# Calculating differences between dates
+# # datetime module:
+# # What is Date & Time Module?
+# # In Python, we use the built-in datetime module to work with:
+# # Current date
+# # Current time
+# # Formatting date/time
+# # Calculating differences between dates
 
-# Main Classes in datetime
-# 4 important tools:
-# 1. date → Only date (year, month, day)
-# 2. time → Only time (hour, minute, second)
-# 3. datetime → Both date + time
-# 4. timedelta → Difference between two dates
+# # Main Classes in datetime
+# # 4 important tools:
+# # 1. date → Only date (year, month, day)
+# # 2. time → Only time (hour, minute, second)
+# # 3. datetime → Both date + time
+# # 4. timedelta → Difference between two dates
 
-# 1. Get Current Date & Time
+# # 1. Get Current Date & Time
+# from datetime import datetime
+# now = datetime.now()
+# print(now)
+
+# # 2. Get Only Date
+# from datetime import date
+# today = date.today()
+# print(today)
+
+# # 3. Get Only Time
+# from datetime import datetime
+# now = datetime.now()
+# print(now.time())
+
+# # 4. Create Your Own Date
+# from datetime import date
+# d = date(2026, 4, 6)
+# print(d)
+
+# # 5. Format Date (Very Important)
+# from datetime import datetime
+# now = datetime.now()
+# print(now.strftime("%d-%m-%Y"))
+
+# # 6. Difference Between Two Dates
+# from datetime import date
+# d1 = date(2026, 4, 6)
+# d2 = date(2026, 4, 1)
+# diff = d1 - d2
+# print(diff)
+
+# # 7. Add Days to Date
+# from datetime import date, timedelta
+# today = date.today()
+# new_date = today + timedelta(days=5)
+# print(new_date)
+
+# # 8.Working with date and time
+# from datetime import datetime
+# now = datetime.now()
+# print(now)       # 2026.4.6 02:31:00
+# print(now.year)  # 2026
+# print(now.date)  # 6
+# print(now.time)  # 02
+
+# # Easy Way to Remember
+# # date → only date
+# # time → only time
+# # datetime → both
+# # timedelta → difference
+
+# # Python uses datetime module for date & time
+# # datetime.now() → current date & time
+# # date.today() → current date
+# # strftime() → format date
+# # timedelta → calculate difference
+# # Can create custom date using date(YYYY, MM, DD)
+
+# Task
+# 1.Write a Python program to find a person's age using the datetime module. Take the date of birth as input from the user.
 from datetime import datetime
-now = datetime.now()
-print(now)
+birth_year = int(input("Enter your birth year: "))
+current_year = datetime.now().year
+age = current_year - birth_year
+print("Your age is:", age)
 
-# 2. Get Only Date
-from datetime import date
-today = date.today()
-print(today)
-
-# 3. Get Only Time
+# 2.Write a Python program to find the number of days from a person's birth date to today using the datetime module. Take input from the user.
 from datetime import datetime
-now = datetime.now()
-print(now.time())
+birth_date_input = input("Enter your birth date (YYYY-MM-DD): ")
+birth_date = datetime.strptime(birth_date_input, "%Y-%m-%d")
+today = datetime.now()
+difference = today - birth_date
+print("You have lived for", difference.days, "days")
 
-# 4. Create Your Own Date
-from datetime import date
-d = date(2026, 4, 6)
-print(d)
-
-# 5. Format Date (Very Important)
+# 3.Write a Python program to Take your birth date from the user and print the day of the week you were born?
 from datetime import datetime
-now = datetime.now()
-print(now.strftime("%d-%m-%Y"))
+birth_date_input = input("Enter your birth date (YYYY-MM-DD): ")
+birth_date = datetime.strptime(birth_date_input, "%Y-%m-%d")
+birth_day = birth_date.strftime("%A")
+print("You were born on",birth_day)
 
-# 6. Difference Between Two Dates
-from datetime import date
-d1 = date(2026, 4, 6)
-d2 = date(2026, 4, 1)
-diff = d1 - d2
-print(diff)
+# 4.Write a Python program to take a date from the user and print how many days are left until that date.
+from datetime import datetime
+future_date_input = input("Enter your today date (YYYY-MM-DD): ")
+future_date = datetime.strptime(future_date_input, "%Y-%m-%d")
+todays_date = datetime.now()
+difference =  future_date - todays_date
+print('the no. of days remaining is:', difference)
 
-# 7. Add Days to Date
-from datetime import date, timedelta
-today = date.today()
-new_date = today + timedelta(days=5)
-print(new_date)
-
-# Easy Way to Remember
-# date → only date
-# time → only time
-# datetime → both
-# timedelta → difference
-
-# Python uses datetime module for date & time
-# datetime.now() → current date & time
-# date.today() → current date
-# strftime() → format date
-# timedelta → calculate difference
-# Can create custom date using date(YYYY, MM, DD)
+# 5.Write a Python program to take a date of birth from the user and print the person’s exact age in years and months.
+from datetime import datetime
+birth_date_input = input("Enter your birth date (YYYY-MM-DD): ")
+birth_date = datetime.strptime(birth_date_input, "%Y-%m-%d")
+today = datetime.now()
+years = today.year - birth_date.year
+months = today.month - birth_date.month
+if months < 0:
+    years -= 1
+    months += 12
+print("Your age is:", years, "years and", months, "months")
