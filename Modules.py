@@ -126,26 +126,67 @@
 # print(nums)
 
 # datetime module:
-# It is a python built-in module, we use with,we use with datetime, and time interval and it's very important for data analysis, logging and automation task.
-# types in datetime module:
-# date
-# time
-# datetime
-# timedelta(datetime difference)
+# What is Date & Time Module?
+# In Python, we use the built-in datetime module to work with:
+# Current date
+# Current time
+# Formatting date/time
+# Calculating differences between dates
 
-# to find current date:
+# Main Classes in datetime
+# 4 important tools:
+# 1. date → Only date (year, month, day)
+# 2. time → Only time (hour, minute, second)
+# 3. datetime → Both date + time
+# 4. timedelta → Difference between two dates
+
+# 1. Get Current Date & Time
 from datetime import datetime
-now = datetime.today()
+now = datetime.now()
 print(now)
 
-# to find custom date:
+# 2. Get Only Date
 from datetime import date
-d = date(2026,4,4)
+today = date.today()
+print(today)
+
+# 3. Get Only Time
+from datetime import datetime
+now = datetime.now()
+print(now.time())
+
+# 4. Create Your Own Date
+from datetime import date
+d = date(2026, 4, 6)
 print(d)
 
-# to find custom time:
-from datetime import time
-t = time(12,11,00)
-print(t)
+# 5. Format Date (Very Important)
+from datetime import datetime
+now = datetime.now()
+print(now.strftime("%d-%m-%Y"))
 
-# 
+# 6. Difference Between Two Dates
+from datetime import date
+d1 = date(2026, 4, 6)
+d2 = date(2026, 4, 1)
+diff = d1 - d2
+print(diff)
+
+# 7. Add Days to Date
+from datetime import date, timedelta
+today = date.today()
+new_date = today + timedelta(days=5)
+print(new_date)
+
+# Easy Way to Remember
+# date → only date
+# time → only time
+# datetime → both
+# timedelta → difference
+
+# Python uses datetime module for date & time
+# datetime.now() → current date & time
+# date.today() → current date
+# strftime() → format date
+# timedelta → calculate difference
+# Can create custom date using date(YYYY, MM, DD)
