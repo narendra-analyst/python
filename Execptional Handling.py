@@ -30,6 +30,54 @@ print(a / b)
 # Error → ZeroDivisionError
 # Code is correct, but while running → error happens
 
+# Types of Runtime Errors in Python
+# 1.ZeroDivisionError
+# When you divide a number by zero
+print(5 / 0)
+
+# 2.TypeError
+# When you use wrong data types together
+print("Age: " + 25)
+# You can't add string + integer
+
+# 3.ValueError
+# When the value is correct type but wrong format
+num = int("abc")
+# "abc" cannot be converted to integer
+
+# 4.IndexError
+# When accessing invalid index in list
+my_list = [1, 2, 3]
+print(my_list[5])
+# Index 5 doesn't exist
+
+# 5.KeyError
+# When accessing a dictionary with wrong key
+data = {"name": "Tony"}
+print(data["age"])
+# "age" key not found
+
+# 6.FileNotFoundError
+# When file does not exist
+open("data.txt", "r")
+# File not found
+
+# 7.NameError
+# When variable is not defined
+print(x)
+# x is not declared
+
+# 8.AttributeError
+# When object has no such attribute
+x = 10
+x.append(5)
+# int has no append()
+
+# 9.ImportError / ModuleNotFoundError
+# When module is not found
+import abcxyz
+# Module doesn't exist
+
 # What is Logical Error?
 # A logical error means:
 # Your program runs
