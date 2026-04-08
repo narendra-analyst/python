@@ -66,7 +66,6 @@ def integer_input(number):
 num = integer_input("integer:")
 print("input value:",num)
 
-
 # 3.Write a Python program that opens a file and handles a FileNotFoundError exception if the file does not exist.
 def open_file(filename):
     try:
@@ -93,11 +92,9 @@ def open_file(filename):
     try:
         with open(filename,'r') as file:
             content = file.read()
-            return content
+            print(content)
     except PermissionError:
-        print('Error: no access for this file')
-    except FileNotFoundError:
-        print('Error: file not found')    
+        print('Error: no access for this file')    
 file_name = input('File name:')
 open_file(file_name)
 
@@ -109,8 +106,6 @@ def my_list():
         print("Element:", numbers[index])
     except IndexError:
         print("Error: Invalid Index Access")
-    except ValueError:
-        print("Error: enter a valid number")
 my_list()
 
 # 7.Write a Python program that prompts the user to input a number and handles a KeyboardInterrupt exception if the user cancels the input.
