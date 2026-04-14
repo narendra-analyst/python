@@ -313,7 +313,7 @@ s1 = Student(50)
 s2 = Student(60)
 print(s1 + s2)   # 110
 # Here:
-# +is overloaded using __add__()
+# + is overloaded using __add__()
 # Instead of normal addition, it adds student marks
 # Common Operator Methods
 # Operator	Method
@@ -321,3 +321,38 @@ print(s1 + s2)   # 110
 # -	        __sub__()
 # *	        __mul__()
 # /	        __truediv__()
+
+# What is Abstraction?
+# Abstraction means hiding unnecessary details and showing only important things.
+
+# Real-Life Example
+# Think about a TV remote, You press ON button, TV turns ON.
+# But: You don’t know internal wiring, You don’t know circuits, You only see what to use, not how it works, This is Abstraction.
+
+# Example in Python - We use abstract classes for abstraction. Python uses abc module (buil-in module)
+from abc import ABC, abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+class Rectangle(Shape):
+    def area(self):
+        print("Area = length × breadth")
+obj = Rectangle()
+obj.area()
+
+# What is happening here?
+# Shape is an abstract class
+# area() is an abstract method (no body)
+# Any child class (like RECTANGLE) MUST define area()
+
+# Why we use Abstraction?
+# 3 main reasons:
+# Hide complex logic
+# Improve security
+# Make code clean and easy
+
+# Important Points
+# ✔ Cannot create object of abstract class
+# ✔ Abstract method has no body
+# ✔ Child class must implement it
