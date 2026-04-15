@@ -322,6 +322,9 @@ print(s1 + s2)   # 110
 # *	        __mul__()
 # /	        __truediv__()
 
+# What is Encapsulation?
+
+
 # What is Abstraction?
 # Abstraction means hiding unnecessary details and showing only important things.
 
