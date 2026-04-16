@@ -323,7 +323,73 @@ print(s1 + s2)   # 110
 # /	        __truediv__()
 
 # What is Encapsulation?
+# Wrapping data (variables) and methods (functions) together inside a class
+# And controlling access to that data (protecting it)
+# Simple Example
+class Student:
+    def __init__(self, name, marks):
+        self.name = name        # public
+        self._marks = marks     # protected
+    def display(self):
+        print(self.name, self._marks)
+obj = Student("John", 90)
+obj.display()
+# Here:
+# Data + function are inside one class → Encapsulation
+# _marks is not directly meant for outside use → Controlled access
 
+# Types of Encapsulation (Access Modifiers in Python)
+# 1.Public (Normal Variable)
+# Can access from anywhere
+class Demo:
+    def __init__(self):
+        self.name = "Stark"   # public
+obj = Demo()
+print(obj.name)  # Works
+# ✔ No restriction
+# ✔ Default type
+
+# 2.Protected (_variable)
+# Meant for internal use (but still accessible)
+class Demo:
+    def __init__(self):
+        self._age = 25   # protected
+obj = Demo()
+print(obj._age)  # ⚠ Works, but should not access directly
+# ✔ Single underscore _
+# ✔ Just a convention (not strict security)
+
+# 3.Private (__variable)
+# Cannot access directly outside class
+class Demo:
+    def __init__(self):
+        self.__salary = 50000   # private
+obj = Demo()
+print(obj.__salary) #Error
+# ✔ Double underscore __
+# ✔ Python does name mangling
+# To access:
+print(obj._Demo__salary)  # Works (but not recommended)
+
+# Real-Time Example (Best Practice)
+class Bank:
+    def __init__(self):
+        self.__balance = 1000   # private
+    def deposit(self, amount):
+        self.__balance += amount
+    def get_balance(self):
+        return self.__balance
+obj = Bank()
+obj.deposit(500)
+print(obj.get_balance())  # Safe access
+# Here:
+# Balance is hidden
+# Access only through methods → Proper encapsulation
+
+# In One Line (Easy Memory Trick)
+# Public → Anyone can access
+# Protected (_) → “Please don’t use outside”
+# Private (__) → “Strictly hidden”
 
 # What is Abstraction?
 # Abstraction means hiding unnecessary details and showing only important things.
@@ -359,3 +425,4 @@ obj.area()
 # ✔ Cannot create object of abstract class
 # ✔ Abstract method has no body
 # ✔ Child class must implement it
+
