@@ -66,6 +66,7 @@
 
 
 from pymongo import MongoClient
+from bson import ObjectId
 mongoUrl = MongoClient("mongodb+srv://Narendra:Narendra15@cluster0.6gqovw3.mongodb.net/?appName=Cluster0")
 myDB = mongoUrl['Python-class']
 
@@ -120,3 +121,61 @@ def createclientdetails(data):
     usercreation = myCollection.insert_many(data)
     print(usercreation)
 # createclientdetails(clientdata)
+
+# get all clients - all details
+def getAllclientdata():
+    data = myCollection.find()
+    for i in data:
+        print(i)
+# getAllcliendata()
+
+# get specific client data - one detail
+def SpecificData(id):
+    print(id)
+    data = myCollection.find_one({"_id":ObjectId(id)})
+    print(data)
+# SpecificData("69e0a20ed7bdaac3b8b35594")
+
+# get clients - limit details
+def getLimitclientdata():
+    data = myCollection.find().limit(2)
+    for i in data:
+        print(i)
+# getLimitclientdata()
+
+# sorting
+def getclientDataSorting():
+    data = myCollection.find().sort("name",-1)
+    for i in data:
+        print(i)
+# getclientDataSorting()
+
+# Query
+def usingQuery():
+    query = {"Age":{"$gt":30}}
+    data = myCollection.find(query)
+    for i in data:
+        print(i)
+# usingQuery()
+
+# update
+def updateUserById(id, newData):
+    print("Updating user:", id)
+    result = myCollection.update_one(
+        {"_id": ObjectId(id)},   # find using _id
+        {"$set": newData}        # update data
+    )
+    print("Matched:", result.matched_count)
+    print("Modified:", result.modified_count)
+# updateUserById(
+#     "69e0a20ed7bdaac3b8b35596",
+#     {"Name":"Harish", "Age": 26, "Mobile": 9345452842}
+# )  
+
+def deleteUserById(id):
+    print("Deleting user:", id)
+    result = myCollection.delete_one(
+        {"_id": ObjectId(id)}   # find using _id
+    )
+    print("Deleted:", result.deleted_count)
+# deleteUserById("69e0a20ed7bdaac3b8b35596")
